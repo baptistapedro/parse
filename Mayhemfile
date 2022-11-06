@@ -1,0 +1,5 @@
+project: parse
+target: parse
+cmds:
+  - cmd: /fuzz_number
+    env: {}
