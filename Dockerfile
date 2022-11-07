@@ -4,7 +4,7 @@ RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONT
 
 RUN DEBIAN_FRONTEND=noninteractive \
 	apt-get update && apt-get install -y build-essential tzdata pkg-config \
-	clang git
+	clang git wget
 
 RUN wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
 RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.1.linux-amd64.tar.gz
